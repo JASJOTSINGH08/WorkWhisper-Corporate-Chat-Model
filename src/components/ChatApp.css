@@ -1,0 +1,25 @@
+.chat-app {
+    display: flex;
+    height: 100vh;
+    background-color: #000307;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.h-full {
+  height: 100vh;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  background-color: #1c1e21; /* Darker background for the main container */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  overflow: hidden; /* Prevent overflow */
+}

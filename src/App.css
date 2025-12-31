@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+/* ============================
+   🌞 Light Theme (Default)
+   ============================ */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #f0f2f5;
+  color: #1c1e21;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f0f2f5;
+  background-image: none;
+  opacity: 0.04;
+  z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+  display: flex;
+  width: 95%;
+  max-width: 1600px;
+  height: 95%;
+  margin: auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
 }
+
+/* Scrollbar (Light Theme) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+/* ============================
+   🌙 Dark Theme Overrides
+   ============================ */
+body.dark {
+  background-color: #0b141a;
+  color: #e9edef;
+}
+
+body.dark .app {
+  background-color: #111b21;
+}
+
+body.dark .app::before {
+  background-color: #0b141a;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAQAAABKfvVzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQfkBQULCQ8D+0aJAAABg0lEQVQ4y43TzUtUURjH8c+9M2NZELSJZrRpES2iNhFBm/6ERrJVQUTQPxDRqkVEu6BNC4lAwlXUQoIgIoJaCQUt2khEIEGrwEIpJJpbzcy9r4vRcZw7jXPO8pzn+Z7f85zfeQRDHPEJl7SMCH/ZFzGZEPbV1i5qG3FQ1dZo1x+nrTIlqCvp0xAljAiTwgMNYVpL2G9G+GHEpGkzPgqzwnUtoT+h8FaYtSshdJsXpk0kFCaFp8JrQU+iJLzWEt7ZmxA6hDfCR0PJeY8JH4RHOhMjueKTcCcpCDeFheRX9wkLwpWkMCgsJqvpFZaFgaSwQ1gVTjQF4ZRRYVdSyAgrQl9T6DNqRWdSyAprQmdT6LQurAsdKUFYswQFi8KBptBnzIowZyApCGvCGSMmDSeFnHDXlLBmMCl0C/PCmr2J+XQIr4Q5u5vC4P/r+mpvQugRXmgJc/YnhLwJ4YuwkCzZZVNYFG4ZSAgZ94VPwm0D//uHXDZiSdWsioqKmhUVS0ZcTpf8A6MS9nbe7IrfAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIwLTA1LTA1VDExOjA5OjE1KzAwOjAwJmJPJgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMC0wNS0wNVQxMTowOToxNSswMDowMFc/95oAAAAASUVORK5CYII=");
+  opacity: 0.06;
+}
+
+body.dark .container {
+  background-color: #111b21;
+  border: 1px solid #2a3942;
+}
+
+/* Scrollbar (Dark Theme) */
+body.dark ::-webkit-scrollbar-thumb {
+  background: #374045;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: #435055;
+}
+
+/* Firefox override */
+body.dark * {
+  scrollbar-color: #374045 transparent;
+}
+

@@ -1,0 +1,56 @@
+.message-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #e5e7eb;
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #1f2937;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:disabled {
+  background-color: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* Icon Button (Send + Attach) */
+.icon-btn {
+  background: #03101e;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-btn:hover:not(:disabled) {
+  background: #b6c4d2;
+  transform: scale(1.1);
+}
+
+.icon-btn:disabled {
+  background: #16d660;
+  cursor: not-allowed;
+}
+
+/* Icon inside buttons */
+.icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(1); /* For dark icon to become white on blue button */
+}

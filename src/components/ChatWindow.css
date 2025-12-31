@@ -1,0 +1,22 @@
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f3f4f6;
+}
+
+body.dark .chat-window {
+  background-color: #1f2937;
+}
+
+.chat-placeholder {
+  color: #060606; /* You can change this to your desired shade */
+  font-size: 16px;
+  text-align: center;
+  padding: 1rem;
+}
+
+body.dark .chat-placeholder {
+  color: #ffff;
+}

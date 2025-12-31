@@ -1,23 +1,31 @@
 {
   "name": "chat-frontend",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "axios": "^1.8.4",
+    "concurrently": "^9.1.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "engine.io-client": "^6.6.3",
+    "express": "^5.1.0",
+    "firebase": "^11.6.0",
+    "http-proxy-middleware": "^3.0.3",
+    "lucide-react": "^0.486.0",
+    "mdb-react-ui-kit": "^9.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.30.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "socket.io-client": "^4.8.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "server": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm start\""
   },
+  "proxy": "http://localhost:3000",
   "eslintConfig": {
     "extends": [
       "react-app",
